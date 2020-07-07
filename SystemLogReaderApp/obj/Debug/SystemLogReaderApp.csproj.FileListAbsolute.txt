@@ -1,0 +1,10 @@
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\bin\Debug\SystemLogReaderApp.exe.config
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\bin\Debug\SystemLogReaderApp.exe
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\bin\Debug\SystemLogReaderApp.pdb
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.csprojAssemblyReference.cache
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.MainForm.resources
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.Properties.Resources.resources
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.csproj.GenerateResource.cache
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.csproj.CoreCompileInputs.cache
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.exe
+C:\Users\internship\Documents\internship\SystemLogReaderApp\SystemLogReaderApp\obj\Debug\SystemLogReaderApp.pdb

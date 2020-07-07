@@ -11,7 +11,7 @@ namespace SystemLogReaderApp.parser
     {
         protected override SystemLogMessage ParseFileLine(string line)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

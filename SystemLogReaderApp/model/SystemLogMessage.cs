@@ -11,7 +11,7 @@ namespace SystemLogReaderApp.model
         public string MessageType { get; set; }
         public string Category { get; set; }
         public DateTime Date { get; set; }
-        public string Tag { get; set; }
+        public List<string> Tags { get; set; }
         public string Message { get; set; }
     }
 

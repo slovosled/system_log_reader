@@ -68,8 +68,23 @@ namespace SystemLogReaderApp
 
         private void updateGridView(List<SystemLogMessage> logs)
         {
-            table.Clear();
-            systemLogView.DataSource = table;
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("No");
+            dataTable.Columns.Add("MessageType");
+            dataTable.Columns.Add("Category");
+            dataTable.Columns.Add("Date");
+            dataTable.Columns.Add("Message");
+
+            int index = 1;
+            foreach (SystemLogMessage log in logs)
+            {
+                dataTable.Rows.Add(new object[] { index, log.MessageType, log.Category, log.Date, log.Message });
+                index++;
+            }
+
+            systemLogView.DataSource = dataTable;
+            systemLogView.Refresh();
+
         }
     }
 }

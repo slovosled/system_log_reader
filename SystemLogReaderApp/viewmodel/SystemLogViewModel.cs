@@ -14,7 +14,7 @@ namespace SystemLogReaderApp.viewmodel
             this.repository = repository;
         }
 
-        public List<SystemLogMessage> ExtractLogMessages(string fileNameAbsolutePath)
+        public List<SystemLogMessage> ExtractFileLogMessages(string fileNameAbsolutePath)
         {
             throw new NotImplementedException();
         }

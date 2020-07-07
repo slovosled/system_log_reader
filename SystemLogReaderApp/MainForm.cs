@@ -32,7 +32,7 @@ namespace SystemLogReaderApp
         {
             if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Clicked");
+                
             }
         }
 

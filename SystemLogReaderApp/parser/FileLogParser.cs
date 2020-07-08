@@ -24,7 +24,6 @@ namespace SystemLogReaderApp.parser
                         while (!sr.EndOfStream)
                         {
                             string line = sr.ReadLine();
-                            
                             TYPE log = ParseFileLine(line);
                             if (log == null)
                                 continue;

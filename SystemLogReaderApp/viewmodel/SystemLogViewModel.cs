@@ -8,20 +8,32 @@ namespace SystemLogReaderApp.viewmodel
     class SystemLogViewModel
     {
         private readonly SystemLogRepository repository;
+        private List<SystemLog> logMessages;
 
         public SystemLogViewModel(SystemLogRepository repository)
         {
             this.repository = repository;
         }
 
-        public List<SystemLogMessage> ExtractFileLogMessages(string fileAbsolutePath)
+        public List<SystemLog> ExtractFileLogMessages(string fileAbsolutePath)
         {
-            return repository.GetLogMessages(fileAbsolutePath);
+            logMessages = null;
+            logMessages =  repository.GetLogMessages(fileAbsolutePath);
+            return logMessages;
         }
 
-        public bool SaveFileStatistics()
+        public bool ProduceFileStatistics(string fileName)
         {
-            throw new NotImplementedException();
+            if (ContainsLogData())
+            {
+                return repository.SaveFileStatistics(logMessages,fileName);
+            }
+            return false;
+        }
+
+        public bool ContainsLogData()
+        {
+            return logMessages != null;
         }
 
     }

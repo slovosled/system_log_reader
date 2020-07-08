@@ -10,21 +10,23 @@ namespace SystemLogReaderApp.repository
 {
     class SystemLogRepository
     {
-        private readonly FileLogParser<SystemLogMessage> parser;
-
-        public SystemLogRepository(FileLogParser<SystemLogMessage> parser)
+        private readonly FileLogParser<SystemLog> parser;
+        private readonly IFileLogSaver<SystemLog> fileSaver;
+    
+        public SystemLogRepository(FileLogParser<SystemLog> parser, IFileLogSaver<SystemLog> fileSaver)
         {
             this.parser = parser;
+            this.fileSaver = fileSaver;
         }
 
-        public List<SystemLogMessage> GetLogMessages(string fileAbsolutePath)
+        public List<SystemLog> GetLogMessages(string fileAbsolutePath)
         {
             return parser.Parse(fileAbsolutePath);
         }
 
-        public bool SaveFileStatistics()
+        public bool SaveFileStatistics(List<SystemLog> logMessages,string absoluteFileNamePath)
         {
-            throw new NotImplementedException();
+            return fileSaver.SaveFile(logMessages, absoluteFileNamePath);
         }
 
     }

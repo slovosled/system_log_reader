@@ -63,15 +63,15 @@
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(314, 34);
             this.openFileToolStripMenuItem.Text = "Open File";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
             // extractFilecsvToolStripMenuItem
             // 
             this.extractFilecsvToolStripMenuItem.Name = "extractFilecsvToolStripMenuItem";
-            this.extractFilecsvToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.extractFilecsvToolStripMenuItem.Text = "Extract File (.csv)";
+            this.extractFilecsvToolStripMenuItem.Size = new System.Drawing.Size(314, 34);
+            this.extractFilecsvToolStripMenuItem.Text = "Extract File Statistics (.csv)";
             this.extractFilecsvToolStripMenuItem.Click += new System.EventHandler(this.extractFilecsvToolStripMenuItem_Click);
             // 
             // panel1

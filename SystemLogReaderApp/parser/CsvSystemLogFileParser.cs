@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SystemLogReaderApp.model;
 
 namespace SystemLogReaderApp.parser
 {
-    class CsvSystemLogFileParser : FileLogParser<SystemLogMessage>
+    class CsvSystemLogFileParser : FileLogParser<SystemLog>
     {
-        protected override SystemLogMessage ParseFileLine(string line)
+        protected override SystemLog ParseFileLine(string line)
         {
 
             const int minPartsOfLogs = 4;
@@ -32,8 +26,7 @@ namespace SystemLogReaderApp.parser
 
             LogBag bag = parseMessage(message);
 
-
-            SystemLogMessage logMessage = new SystemLogMessage();
+            SystemLog logMessage = new SystemLog();
             logMessage.MessageType = messageType;
             logMessage.Category = category;
             logMessage.Date = extractedDate;
@@ -41,11 +34,10 @@ namespace SystemLogReaderApp.parser
 
             if(bag.Tags != null)
             {
-                logMessage.Tags = bag.Tags.ToList();
+                logMessage.Tags = bag.Tags;
             }
 
             return logMessage;
-
 
         }
 
@@ -69,7 +61,7 @@ namespace SystemLogReaderApp.parser
                 }
                 else
                 {
-                    potentialTags = potentialTags.Substring(1, potentialTags.IndexOf("#"));
+                    potentialTags = potentialTags.Substring(1, potentialTags.IndexOf("#")-1);
                     bag.Tags = new string[] { potentialTags };
                 }
                    

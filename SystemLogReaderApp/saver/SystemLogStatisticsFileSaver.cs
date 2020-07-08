@@ -24,9 +24,9 @@ namespace SystemLogReaderApp.model
         private List<string> prepareFileLines(List<SystemLog> data)
         {
             List<string> fileLines = new List<string>();
-            Dictionary<string, int> types = SystemLogStatisticsUtility.computeTypesStatistics(data);
-            Dictionary<string, int> categories = SystemLogStatisticsUtility.computeCategoriesStatistics(data);
-            Dictionary<string, int> tags = SystemLogStatisticsUtility.computeTagsStatistics(data);
+            Dictionary<string, int> types = SystemLogStatisticsUtility.ComputeTypesStatistics(data);
+            Dictionary<string, int> categories = SystemLogStatisticsUtility.ComputeCategoriesStatistics(data);
+            Dictionary<string, int> tags = SystemLogStatisticsUtility.ComputeTagsStatistics(data);
 
             fileLines.Add($"Files Total: {data.Count}");
             foreach (string key in types.Keys)

@@ -10,7 +10,7 @@ namespace SystemLogReaderApp.utilities
     class SystemLogStatisticsUtility
     {
 
-        public static Dictionary<string, int> computeTypesStatistics(List<SystemLog> logs)
+        public static Dictionary<string, int> ComputeTypesStatistics(List<SystemLog> logs)
         {
             Dictionary<string, int> types = new Dictionary<string, int>();
             foreach (SystemLog log in logs)
@@ -27,7 +27,7 @@ namespace SystemLogReaderApp.utilities
             return types;
         }
 
-        public static Dictionary<string, int> computeTagsStatistics(List<SystemLog> logs)
+        public static Dictionary<string, int> ComputeTagsStatistics(List<SystemLog> logs)
         {
             Dictionary<string, int> tags = new Dictionary<string, int>();
 
@@ -51,7 +51,7 @@ namespace SystemLogReaderApp.utilities
             return tags;
         }
 
-        public static Dictionary<string, int> computeCategoriesStatistics(List<SystemLog> data)
+        public static Dictionary<string, int> ComputeCategoriesStatistics(List<SystemLog> data)
         {
             Dictionary<string, int> categories = new Dictionary<string, int>();
 
